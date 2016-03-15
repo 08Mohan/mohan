@@ -38,6 +38,5 @@ noble.on('discover', function (peripheral)
 {
      var macAddress = peripheral.uuid;
      var rssi = peripheral.rssi;
-     var localName = advertisment.localName;
-     console.log('found device:', macAddress, ' ', localName, ' ', rssi);
+     console.log('found device:', macAddress, ' ', 'hai mohan', ' ', rssi);
 });
