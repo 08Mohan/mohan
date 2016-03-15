@@ -38,5 +38,5 @@ noble.on('discover', function (peripheral)
 {
      var macAddress = peripheral.uuid;
      var rssi = peripheral.rssi;
-     console.log('found device:', macAddress, ' ', 'hai mohan', ' ', rssi);
+     console.log('found a device with macAddress:', macAddress, ' ', 'with a signal strength of :', ' ', rssi);
 });
