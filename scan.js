@@ -1,4 +1,4 @@
-var noble = require('./index');
+var noble = require('noble');
 
 
 
