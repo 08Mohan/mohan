@@ -50,10 +50,23 @@ noble.on('discover', function (peripheral)
         socket.emit('deviceData', { mac: peripheral.uuid, rssi: peripheral.rssi });
       }
  });
+ 
+ 
+ noble.startScanning('stateChange',function(state)
+  {
+     console.log('on -> stateChange: ' + state);
 
-
-
-
+    if (state === 'poweredOn')
+    {
+        noble.startScanning();
+    }
+    else
+    {
+        noble.stopScanning();
+    }
+  });
+ 
+ 
  noble.startScanning([], true);
 
     
