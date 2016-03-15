@@ -52,21 +52,6 @@ noble.on('discover', function (peripheral)
  });
  
  
- noble.startScanning('stateChange',function(state)
-  {
-     console.log('on -> stateChange: ' + state);
 
-    if (state === 'poweredOn')
-    {
-        noble.startScanning();
-    }
-    else
-    {
-        noble.stopScanning();
-    }
-  });
- 
- 
- noble.startScanning([], true);
 
     
